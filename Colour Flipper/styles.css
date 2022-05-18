@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
-*,
+/* *,
 ::after,
 ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 body {
   font-family: var(--ff-secondary);
   background: var(--clr-grey-10);
@@ -14,42 +14,16 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
 }
+
 ul {
   list-style-type: none;
 }
 a {
   text-decoration: none;
 }
-h1,
-h2,
-h3,
-h4 {
-  letter-spacing: var(--spacing);
-  text-transform: capitalize;
-  line-height: 1.25;
-  margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
-}
-h1 {
-  font-size: 3rem;
-}
-h2 {
-  font-size: 2rem;
-}
-h3 {
-  font-size: 1.25rem;
-}
-h4 {
-  font-size: 0.875rem;
-}
-.container h2 {
-    background-color: #222;
-}
 
-p {
-  margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
-}
+/* Media Queries */
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -73,34 +47,11 @@ p {
     line-height: 1;
   }
 }
-/*  global classes */
 
-/* section */
-.section {
-  padding: 5rem 0;
-}
+/* =============== 
+ Nav
+=============== */
 
-.section-center {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-}
-@media screen and (min-width: 992px) {
-  .section-center {
-    width: 95vw;
-  }
-}
-main {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-}
-
-/*
-=============== 
-Nav
-===============
-*/
 nav {
   background: var(--clr-white);
   height: 3rem;
@@ -134,11 +85,12 @@ nav a {
 nav a:hover {
   color: var(--clr-primary-5);
 }
-/*
+
+/* 
 =============== 
 Container
-===============
-*/
+=============== */
+
 main {
   min-height: calc(100vh - 3rem);
   display: grid;
@@ -176,4 +128,44 @@ main {
 .btn-hero:hover {
   color: var(--clr-white);
   background: var(--clr-black);
+} */
+
+main {
+  min-height: calc(100vh - 3rem);
+  display: grid;
+  place-items: center;
+}
+.container {
+  text-align: center;
+}
+.container h2 {
+  background: #222;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 2.5rem;
+}
+.color {
+  color: hsl(205, 78%, 60%);
+}
+
+.btn-hero {
+  font-family: "Ranchers", sans-serif;
+  text-transform: uppercase;
+  background: transparent;
+  color: #222;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  font-weight: 700;
+  transition: all 0.3s linear;
+  border: 2px solid #222;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  padding: 0.75rem 1.25rem;
+}
+.btn-hero:hover {
+  color: #fff;
+  background: #222;
 }
